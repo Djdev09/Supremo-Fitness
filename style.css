@@ -1,0 +1,734 @@
+@font-face {
+  font-family: "Kenyan Coffee";
+  src: url("./assets/KenyanCoffee-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #111111;
+  color: #e0e0e0;
+  overflow-x: hidden;
+}
+
+.font-kenyan {
+  font-family: "Kenyan Coffee", sans-serif;
+}
+
+.hero-grayscale {
+  filter: grayscale(100%) contrast(120%) brightness(80%);
+  object-fit: cover;
+}
+
+.bg-grayscale {
+  filter: grayscale(100%) contrast(110%) brightness(70%);
+}
+
+.section-title-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.section-title {
+  position: relative;
+  z-index: 1;
+  font-family: "Kenyan Coffee", sans-serif;
+  font-size: clamp(3.6rem, 10vw, 7rem);
+  line-height: 0.9;
+  letter-spacing: 0.015em;
+  text-transform: uppercase;
+  color: #0b0b0b;
+}
+
+.section-title.section-title-light {
+  color: #ffffff;
+}
+
+.class-card-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  padding: 0.8rem 1.3rem;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease,
+    background 0.25s ease;
+}
+
+.class-card:hover .class-card-button {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.class-card-button:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.eyebrow-label,
+.faq-eyebrow {
+  display: flex;
+  align-items: center;
+  color: #9ca3af;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  line-height: 1.2;
+}
+
+.eyebrow-label {
+  width: 100%;
+}
+
+.faq-title {
+  font-family: "Kenyan Coffee", sans-serif;
+  font-size: clamp(3rem, 9vw, 6.8rem);
+  line-height: 0.9;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.faq-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  min-height: 5.5rem;
+  padding: 1.25rem 1.4rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.faq-entry {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.faq-entry:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+.faq-item:hover {
+  transform: translateY(-2px);
+}
+
+.faq-entry.is-open .faq-item {
+  transform: none;
+}
+
+.faq-question {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(1.125rem, 2vw, 1.55rem);
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.faq-plus {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #111111;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.45rem;
+  line-height: 1;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.faq-entry.is-open .faq-plus {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.faq-answer-inner {
+  padding: 0 1.4rem 1.5rem;
+  color: #9ca3af;
+  font-size: 1.125rem;
+  line-height: 1.75;
+}
+
+.feature-frame {
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.feature-frame::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg,
+      rgba(0, 0, 0, 0.72) 0%,
+      rgba(0, 0, 0, 0.35) 45%,
+      rgba(0, 0, 0, 0.76) 100%);
+  z-index: 1;
+}
+
+.feature-ghost {
+  font-family: "Kenyan Coffee", sans-serif;
+  font-size: clamp(4.5rem, 14vw, 11rem);
+  line-height: 0.82;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.12);
+}
+
+.feature-title {
+  font-family: "Kenyan Coffee", sans-serif;
+  font-size: clamp(4rem, 11vw, 9rem);
+  line-height: 0.86;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.outline-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18rem;
+  min-height: 4.2rem;
+  padding: 1rem 1.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.outline-button:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.85);
+}
+
+.service-card {
+  min-height: 42rem;
+}
+
+.page-view {
+  display: none;
+  animation: fadeIn 0.4s ease-out;
+}
+
+.page-view.is-active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-hero {
+  position: relative;
+  min-height: 45vh;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.page-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,
+      rgba(0, 0, 0, 0.35) 0%,
+      rgba(0, 0, 0, 0.55) 100%);
+  z-index: 1;
+}
+
+.page-hero-title {
+  font-family: "Kenyan Coffee", sans-serif;
+  font-size: clamp(4rem, 10vw, 8rem);
+  line-height: 0.88;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.content-shell {
+  background: #f5f5f3;
+  color: #111111;
+}
+
+.content-body {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.team-showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.team-showcase-card {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: #000000;
+  overflow: hidden;
+  aspect-ratio: 0.78;
+  cursor: pointer;
+  text-align: left;
+}
+
+.team-showcase-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transform: scale(1.04);
+  transition:
+    transform 0.45s ease,
+    filter 0.45s ease;
+}
+
+.team-showcase-card:hover img,
+.team-showcase-card:focus-visible img {
+  transform: scale(1);
+  filter: grayscale(100%) brightness(1.04);
+}
+
+.team-showcase-card:focus-visible {
+  outline: 2px solid #111111;
+  outline-offset: 4px;
+}
+
+.team-showcase-name {
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 1;
+  font-family: "Kenyan Coffee", sans-serif;
+  font-size: clamp(2.4rem, 4vw, 4rem);
+  line-height: 0.82;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
+}
+
+.team-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  background: rgba(17, 17, 17, 0.76);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.team-modal.hidden {
+  display: none;
+}
+
+.team-modal-panel {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(260px, 0.86fr) minmax(320px, 1fr);
+  width: min(1120px, 100%);
+  min-height: min(72vh, 720px);
+  background: #ffffff;
+  color: #111111;
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.32);
+  overflow: hidden;
+}
+
+.team-modal-image-wrap {
+  background: #050505;
+  min-height: 24rem;
+}
+
+.team-modal-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-modal-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem 4.25rem 4rem 2.75rem;
+}
+
+.team-modal-name {
+  font-family: "Kenyan Coffee", sans-serif;
+  font-size: clamp(3.4rem, 6vw, 5.4rem);
+  line-height: 0.86;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.team-modal-bio {
+  color: #5f5f5f;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.team-modal-close,
+.team-modal-nav {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  background: #171717;
+  color: #ffffff;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+  z-index: 2;
+}
+
+.team-modal-close:hover,
+.team-modal-nav:hover {
+  background: #2a2a2a;
+  transform: translateY(-1px);
+}
+
+.team-modal-close {
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+.team-modal-nav {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.team-modal-nav:hover {
+  transform: translateY(calc(-50% - 1px));
+}
+
+.team-modal-nav-prev {
+  left: 1rem;
+}
+
+.team-modal-nav-next {
+  right: 1rem;
+}
+
+.title-swatch {
+  display: inline-block;
+}
+
+.gym-split {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.dot-pager {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.dot-pager button {
+  width: 0.65rem;
+  height: 0.65rem;
+  background: #d4d4d4;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.dot-pager button.active {
+  background: #111111;
+}
+
+.nav-stack {
+  width: min(460px, calc(100% - 2.5rem));
+  margin: 0 auto;
+  position: relative;
+}
+
+.nav-shell {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 4.5rem;
+  padding: 0.7rem 1.1rem;
+  border-radius: 1.25rem;
+  background: rgba(245, 245, 245, 0.78);
+  color: #111111;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.22);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease,
+    border-radius 0.3s ease;
+}
+
+.nav-shell.is-scrolled {
+  transform: translateY(-2px);
+  background: rgba(245, 245, 245, 0.86);
+  box-shadow: 0 26px 60px rgba(0, 0, 0, 0.28);
+}
+
+.nav-badge {
+  display: none;
+}
+
+.nav-trigger,
+.nav-signal {
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #111111;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.nav-trigger:hover,
+.nav-signal:hover {
+  transform: translateY(-1px);
+}
+
+.nav-trigger-lines {
+  position: relative;
+  width: 1.35rem;
+  height: 1rem;
+}
+
+.nav-trigger-lines span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #111111;
+  transition:
+    transform 0.28s ease,
+    top 0.28s ease,
+    opacity 0.28s ease;
+}
+
+.nav-trigger-lines span:first-child {
+  top: 0.15rem;
+}
+
+.nav-trigger-lines span:last-child {
+  top: 0.7rem;
+}
+
+.nav-brand {
+  display: inline-flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  font-family: "Kenyan Coffee", sans-serif;
+  font-size: clamp(2rem, 3vw, 2.7rem);
+  letter-spacing: 0.06em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.nav-panel {
+  position: absolute;
+  z-index: 1;
+  bottom: calc(100% - 1px);
+  left: 0;
+  width: 100%;
+  border-radius: 1.25rem 1.25rem 0 0;
+  background: rgba(245, 245, 245, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-bottom: none;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 30px 65px rgba(0, 0, 0, 0.28);
+  transform-origin: bottom center;
+  transform: translateY(22px) scaleY(0.28);
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    transform 0.42s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.3s ease;
+  overflow: hidden;
+}
+
+.nav-panel.is-open {
+  transform: translateY(0) scaleY(1);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.nav-links {
+  display: grid;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 4.8rem;
+  border-bottom: 1px solid rgba(17, 17, 17, 0.08);
+  font-family: "Kenyan Coffee", sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #111111;
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.35);
+  transform: translateY(-1px);
+}
+
+.nav-shell.menu-open .nav-trigger-lines span:first-child {
+  top: 0.45rem;
+  transform: rotate(45deg);
+}
+
+.nav-shell.menu-open {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.nav-shell.menu-open .nav-trigger-lines span:last-child {
+  top: 0.45rem;
+  transform: rotate(-45deg);
+}
+
+@media (max-width: 767px) {
+  .nav-stack {
+    width: min(84vw, 320px);
+  }
+
+  .nav-shell {
+    min-height: 4rem;
+    padding: 0.55rem 0.8rem;
+  }
+
+  .nav-badge {
+    width: 6rem;
+    height: 1.75rem;
+  }
+
+  .nav-brand {
+    font-size: 1.55rem;
+  }
+
+  .nav-link {
+    min-height: 4.25rem;
+    font-size: 2.2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .team-showcase-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.1rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .team-modal-panel {
+    grid-template-columns: 1fr;
+    max-width: 760px;
+    min-height: auto;
+  }
+
+  .team-modal-image-wrap {
+    height: 24rem;
+  }
+
+  .team-modal-copy {
+    padding: 2rem 1.5rem 2.5rem;
+  }
+
+  .team-modal-close {
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .team-modal-nav {
+    top: auto;
+    bottom: 1rem;
+    transform: none;
+  }
+
+  .team-modal-nav:hover {
+    transform: translateY(-1px);
+  }
+
+  .team-modal-nav-prev {
+    left: 1rem;
+  }
+
+  .team-modal-nav-next {
+    right: 1rem;
+  }
+}

@@ -1,0 +1,1175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Supremo Fitness</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+  </head>
+
+  <body
+    class="antialiased relative z-0 bg-transparent text-white overflow-x-hidden"
+  >
+    <div
+      class="fixed inset-0 z-[-1] pointer-events-none overflow-hidden bg-[#111111]"
+    >
+      <div
+        class="absolute top-[5%] left-[5%] w-[350px] md:w-[650px] h-[350px] md:h-[650px] bg-[#ff00a0] opacity-[0.06] rounded-full blur-[100px] md:blur-[140px] mix-blend-screen transform-gpu"
+      ></div>
+      <div
+        class="absolute bottom-[5%] right-[5%] w-[350px] md:w-[650px] h-[350px] md:h-[650px] bg-[#00ffff] opacity-[0.06] rounded-full blur-[100px] md:blur-[140px] mix-blend-screen transform-gpu"
+      ></div>
+    </div>
+
+    <header
+      id="navbar"
+      class="fixed top-0 left-0 w-full z-50 backdrop-blur-md text-white border-b border-white/10 transition-all duration-300 h-16 md:h-20"
+    >
+      <div class="w-full flex items-center justify-between h-full">
+        <div
+          class="flex-shrink-0 flex items-center h-full pl-6 md:pl-16 xl:pl-24"
+        >
+          <a
+            href="index.html"
+            class="flex items-center gap-3 text-white hover:text-gray-300 transition-colors z-50"
+          >
+            <img
+              src="assets/Transparent logo.png"
+              alt="Logo"
+              class="w-8 md:w-10 h-auto object-contain"
+            />
+            <span
+              class="font-kenyan text-2xl md:text-3xl tracking-widest uppercase whitespace-nowrap mt-1"
+              >SUPREMO FITNESS</span
+            >
+          </a>
+        </div>
+
+       <nav 
+        class="hidden lg:flex flex-1 justify-end items-center h-full space-x-12 pr-6 md:pr-16 xl:pr-24">
+        <a
+          href="index.html#classes"
+          class="font-sans text-[15px] font-bold tracking-[0.1em] uppercase text-white hover:text-gray-300 transition-colors"
+          >Classes</a
+        >
+        <a
+          href="about.html"
+          class="font-sans text-[15px] font-bold tracking-[0.1em] uppercase text-white hover:text-gray-300 transition-colors"
+          >About Us</a
+        >
+        <a
+          href="index.html#pricing"
+          class="font-sans text-[15px] font-bold tracking-[0.1em] uppercase text-white hover:text-gray-300 transition-colors"
+          >Pricing</a
+        >
+      </nav>
+
+        <div class="flex lg:hidden items-center h-full pr-6 md:pr-16">
+          <button
+            id="nav-toggle"
+            type="button"
+            class="flex flex-col justify-center items-center w-8 h-8 space-y-1.5 focus:outline-none"
+          >
+            <span
+              class="block w-6 h-[2px] bg-white transition-transform duration-300 origin-center"
+            ></span>
+            <span
+              class="block w-6 h-[2px] bg-white transition-opacity duration-300"
+            ></span>
+            <span
+              class="block w-6 h-[2px] bg-white transition-transform duration-300 origin-center"
+            ></span>
+          </button>
+        </div>
+      </div>
+
+      <div
+        id="nav-panel"
+        class="absolute top-full left-0 w-full bg-black/95 backdrop-blur-md border-b border-white/10 hidden flex-col py-6 px-6 gap-6 shadow-xl rounded-none"
+      >
+        <a
+          href="#classes"
+          class="font-sans text-sm font-bold tracking-[0.1em] uppercase text-white hover:text-gray-300 block w-full text-center transition-colors"
+          >Classes</a
+        >
+        <a
+          href="about.html"
+          class="font-sans text-sm font-bold tracking-[0.1em] uppercase text-white hover:text-gray-300 block w-full text-center transition-colors"
+          >About Us</a
+        >
+        <a
+          href="#pricing"
+          class="font-sans text-sm font-bold tracking-[0.1em] uppercase text-white hover:text-gray-300 block w-full text-center transition-colors"
+          >Pricing</a
+        >
+      </div>
+    </header>
+
+    <main class="relative h-screen w-full overflow-hidden flex items-center z-20">
+      <div
+        class="absolute inset-0 z-0"
+        style="
+          -webkit-mask-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 1) 60%,
+            rgba(0, 0, 0, 0) 100%
+          );
+          mask-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 1) 60%,
+            rgba(0, 0, 0, 0) 100%
+          );
+        "
+      >
+        <img
+          src="https://images.unsplash.com/photo-1758778932701-76ef06971b93?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Supremo Fitness Gym"
+          class="w-full h-full hero-grayscale object-cover opacity-[0.35]"
+        />
+      </div>
+
+      <div
+        class="w-full px-8 md:px-16 xl:px-24 z-20 mt-24 md:mt-0 text-white relative"
+      >
+        <div class="w-full lg:w-3/4 xl:w-2/3">
+          <img
+            src="assets/Transparent logo.png"
+            alt="Supremo Fitness logo"
+            class="w-32 md:w-40 lg:w-52 h-auto mb-6 md:mb-8 drop-shadow-2xl"
+          />
+
+          <h1
+            class="font-kenyan text-7xl md:text-[9rem] lg:text-[10rem] leading-[0.85] tracking-normal mb-8 drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]"
+          >
+            <span class="block overflow-hidden"
+              ><span class="block hero-line text-white">BUILT TO MOVE.</span></span
+            >
+            <span class="block overflow-hidden"
+              ><span class="block hero-line text-white"
+                >STRENGTH DRIVEN.</span
+              ></span
+            >
+          </h1>
+
+          <p
+            class="w-full lg:max-w-2xl text-left text-gray-200 text-base md:text-xl leading-relaxed mb-10 font-sans drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] font-medium"
+          >
+            Come by and train with us in the heart of Valenzuela City. A
+            fantastic community with experienced coaches awaits you. Whether you
+            are looking for structured classes, open gym strength training, or
+            martial arts conditioning, you will find your place here.
+          </p>
+
+          <div class="flex flex-wrap gap-3 md:gap-4 relative z-20">
+            <span
+              class="border border-white/40 bg-white/5 backdrop-blur-md text-white px-5 py-2 md:py-2.5 rounded-none text-xs md:text-sm font-medium font-sans hover:bg-white hover:text-black transition-colors cursor-default"
+              >Personal Training</span
+            >
+            <span
+              class="border border-white/40 bg-white/5 backdrop-blur-md text-white px-5 py-2 md:py-2.5 rounded-none text-xs md:text-sm font-medium font-sans hover:bg-white hover:text-black transition-colors cursor-default"
+              >Strength</span
+            >
+            <span
+              class="border border-white/40 bg-white/5 backdrop-blur-md text-white px-5 py-2 md:py-2.5 rounded-none text-xs md:text-sm font-medium font-sans hover:bg-white hover:text-black transition-colors cursor-default"
+              >Group Classes</span
+            >
+            <span
+              class="border border-white/40 bg-white/5 backdrop-blur-md text-white px-5 py-2 md:py-2.5 rounded-none text-xs md:text-sm font-medium font-sans hover:bg-white hover:text-black transition-colors cursor-default"
+              >Boxing & MMA</span
+            >
+            <span
+              class="border border-white/40 bg-white/5 backdrop-blur-md text-white px-5 py-2 md:py-2.5 rounded-none text-xs md:text-sm font-medium font-sans hover:bg-white hover:text-black transition-colors cursor-default"
+              >Cardio Equipment</span
+            >
+            <span
+              class="border border-white/40 bg-white/5 backdrop-blur-md text-white px-5 py-2 md:py-2.5 rounded-none text-xs md:text-sm font-medium font-sans hover:bg-white hover:text-black transition-colors cursor-default"
+              >Functional Workouts</span
+            >
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <section
+      id="classes"
+      class="py-24 md:py-32 w-full relative z-10 border-t border-transparent bg-transparent"
+    >
+      <div class="w-full px-8 md:px-16 xl:px-24 relative z-10">
+        <div
+          class="text-left mb-16 flex flex-col md:flex-row justify-between items-end border-b border-white/10 pb-8 gap-8"
+        >
+          <div class="section-title-wrap">
+            <h2
+              class="font-kenyan text-6xl md:text-8xl text-white drop-shadow-lg leading-none tracking-wider"
+            >
+              OUR CLASSES
+            </h2>
+          </div>
+          <p
+            class="md:w-1/2 xl:w-1/3 text-left text-gray-300 text-sm md:text-lg leading-relaxed font-sans font-medium drop-shadow-md"
+          >
+            Train with our certified coaches. Walk-ins are welcome from Monday
+            to Sunday! Explore our wide range of disciplines designed to build
+            strength, improve mobility, and boost endurance.
+          </p>
+        </div>
+
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10 border border-white/10 w-full"
+        >
+          <!-- Boxing -->
+          <div
+            class="group bg-[#111111] hover:bg-[#161616] transition-colors duration-300 flex flex-col"
+          >
+            <div class="p-3 md:p-4">
+              <div
+                class="relative w-full aspect-[4/3] overflow-hidden border border-white/10"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1509563268479-0f004cf3f58b?q=80&w=1000&auto=format&fit=crop"
+                  class="w-full h-full object-cover grayscale opacity-75 group-hover:scale-105 group-hover:opacity-90 transition-all duration-700"
+                />
+                <div
+                  class="absolute inset-0 bg-red-600 mix-blend-color opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                ></div>
+              </div>
+            </div>
+            <div
+              class="px-4 pb-6 md:px-5 md:pb-7 flex flex-col flex-grow border-t border-white/10"
+            >
+              <h3
+                class="font-kenyan text-4xl md:text-5xl uppercase tracking-wider text-white leading-none pt-4 mb-3"
+              >
+                Boxing
+              </h3>
+              <p class="text-gray-400 text-sm leading-relaxed flex-grow mb-6">
+                Master the sweet science. High-intensity cardio combined with
+                strict technique training for all skill levels.
+              </p>
+              <div>
+                <p class="text-xs text-gray-500 uppercase tracking-[0.2em] mb-3">
+                  Available Schedule
+                </p>
+                <div class="flex flex-wrap gap-3">
+                  <span class="text-sm font-medium border border-white/20 bg-white/5 px-3 py-1.5 text-gray-200">Mon · Wed · Fri</span>
+                  <span class="text-sm font-medium border border-white/20 bg-white/5 px-3 py-1.5 text-gray-200">6AM & 5PM</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- MMA -->
+          <div
+            class="group bg-[#111111] hover:bg-[#161616] transition-colors duration-300 flex flex-col"
+          >
+            <div class="p-3 md:p-4">
+              <div
+                class="relative w-full aspect-[4/3] overflow-hidden border border-white/10"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?q=80&w=1000&auto=format&fit=crop"
+                  class="w-full h-full object-cover grayscale opacity-75 group-hover:scale-105 group-hover:opacity-90 transition-all duration-700"
+                />
+                <div
+                  class="absolute inset-0 bg-blue-600 mix-blend-color opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                ></div>
+              </div>
+            </div>
+            <div
+              class="px-4 pb-6 md:px-5 md:pb-7 flex flex-col flex-grow border-t border-white/10"
+            >
+              <h3
+                class="font-kenyan text-4xl md:text-5xl uppercase tracking-wider text-white leading-none pt-4 mb-3"
+              >
+                MMA
+              </h3>
+              <p class="text-gray-400 text-sm leading-relaxed flex-grow mb-6">
+                Blend grappling, striking, and wrestling into one cohesive
+                martial arts discipline with our pro coaching staff.
+              </p>
+              <div>
+                <p class="text-xs text-gray-500 uppercase tracking-[0.2em] mb-3">
+                  Available Schedule
+                </p>
+                <div class="flex flex-wrap gap-3">
+                  <span class="text-sm font-medium border border-white/20 bg-white/5 px-3 py-1.5 text-gray-200">Tue · Thu · Sat</span>
+                  <span class="text-sm font-medium border border-white/20 bg-white/5 px-3 py-1.5 text-gray-200">7AM & 6PM</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- GX Class -->
+          <div
+            class="group bg-[#111111] hover:bg-[#161616] transition-colors duration-300 flex flex-col"
+          >
+            <div class="p-3 md:p-4">
+              <div
+                class="relative w-full aspect-[4/3] overflow-hidden border border-white/10"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1000&auto=format&fit=crop"
+                  class="w-full h-full object-cover grayscale opacity-75 group-hover:scale-105 group-hover:opacity-90 transition-all duration-700"
+                />
+                <div
+                  class="absolute inset-0 bg-[#ff00a0] mix-blend-color opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                ></div>
+              </div>
+            </div>
+            <div
+              class="px-4 pb-6 md:px-5 md:pb-7 flex flex-col flex-grow border-t border-white/10"
+            >
+              <h3
+                class="font-kenyan text-4xl md:text-5xl uppercase tracking-wider text-white leading-none pt-4 mb-3"
+              >
+                GX Class
+              </h3>
+              <p class="text-gray-400 text-sm leading-relaxed flex-grow mb-6">
+                A fast-paced group experience that pushes your cardiovascular
+                limits and builds teamwork through guided circuits.
+              </p>
+              <div>
+                <p class="text-xs text-gray-500 uppercase tracking-[0.2em] mb-3">
+                  Available Schedule
+                </p>
+                <div class="flex flex-wrap gap-3">
+                  <span class="text-sm font-medium border border-white/20 bg-white/5 px-3 py-1.5 text-gray-200">Mon – Sat</span>
+                  <span class="text-sm font-medium border border-white/20 bg-white/5 px-3 py-1.5 text-gray-200">8AM & 4PM</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TRX -->
+          <div
+            class="group bg-[#111111] hover:bg-[#161616] transition-colors duration-300 flex flex-col"
+          >
+            <div class="p-3 md:p-4">
+              <div
+                class="relative w-full aspect-[4/3] overflow-hidden border border-white/10"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=1000&auto=format&fit=crop"
+                  class="w-full h-full object-cover grayscale opacity-75 group-hover:scale-105 group-hover:opacity-90 transition-all duration-700"
+                />
+                <div
+                  class="absolute inset-0 bg-yellow-400 mix-blend-color opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                ></div>
+              </div>
+            </div>
+            <div
+              class="px-4 pb-6 md:px-5 md:pb-7 flex flex-col flex-grow border-t border-white/10"
+            >
+              <h3
+                class="font-kenyan text-4xl md:text-5xl uppercase tracking-wider text-white leading-none pt-4 mb-3"
+              >
+                TRX
+              </h3>
+              <p class="text-gray-400 text-sm leading-relaxed flex-grow mb-6">
+                Suspension training that leverages gravity and body weight to
+                build strength, balance, and core stability.
+              </p>
+              <div>
+                <p class="text-xs text-gray-500 uppercase tracking-[0.2em] mb-3">
+                  Available Schedule
+                </p>
+                <div class="flex flex-wrap gap-3">
+                  <span class="text-sm font-medium border border-white/20 bg-white/5 px-3 py-1.5 text-gray-200">Wed · Fri</span>
+                  <span class="text-sm font-medium border border-white/20 bg-white/5 px-3 py-1.5 text-gray-200">9AM & 3PM</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Zumba -->
+          <div
+            class="group bg-[#111111] hover:bg-[#161616] transition-colors duration-300 flex flex-col"
+          >
+            <div class="p-3 md:p-4">
+              <div
+                class="relative w-full aspect-[4/3] overflow-hidden border border-white/10"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1000&auto=format&fit=crop"
+                  class="w-full h-full object-cover grayscale opacity-75 group-hover:scale-105 group-hover:opacity-90 transition-all duration-700"
+                />
+                <div
+                  class="absolute inset-0 bg-purple-500 mix-blend-color opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                ></div>
+              </div>
+            </div>
+            <div
+              class="px-4 pb-6 md:px-5 md:pb-7 flex flex-col flex-grow border-t border-white/10"
+            >
+              <h3
+                class="font-kenyan text-4xl md:text-5xl uppercase tracking-wider text-white leading-none pt-4 mb-3"
+              >
+                Zumba
+              </h3>
+              <p class="text-gray-400 text-sm leading-relaxed flex-grow mb-6">
+                Dance your way to fitness. An aerobic workout set to Latin and
+                international music — fun, effective, and addictive.
+              </p>
+              <div>
+                <p class="text-xs text-gray-500 uppercase tracking-[0.2em] mb-3">
+                  Available Schedule
+                </p>
+                <div class="flex flex-wrap gap-3">
+                  <span class="text-sm font-medium border border-white/20 bg-white/5 px-3 py-1.5 text-gray-200">Tue · Thu · Sat</span>
+                  <span class="text-sm font-medium border border-white/20 bg-white/5 px-3 py-1.5 text-gray-200">7:30AM</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- HIIT -->
+          <div
+            class="group bg-[#111111] hover:bg-[#161616] transition-colors duration-300 flex flex-col"
+          >
+            <div class="p-3 md:p-4">
+              <div
+                class="relative w-full aspect-[4/3] overflow-hidden border border-white/10"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1000&auto=format&fit=crop"
+                  class="w-full h-full object-cover grayscale opacity-75 group-hover:scale-105 group-hover:opacity-90 transition-all duration-700"
+                />
+                <div
+                  class="absolute inset-0 bg-orange-500 mix-blend-color opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                ></div>
+              </div>
+            </div>
+            <div
+              class="px-4 pb-6 md:px-5 md:pb-7 flex flex-col flex-grow border-t border-white/10"
+            >
+              <h3
+                class="font-kenyan text-4xl md:text-5xl uppercase tracking-wider text-white leading-none pt-4 mb-3"
+              >
+                HIIT & Circuit
+              </h3>
+              <p class="text-gray-400 text-sm leading-relaxed flex-grow mb-6">
+                Maximum effort through short bursts. Burn fat and build muscle
+                efficiently with coach-guided circuit programming.
+              </p>
+              <div>
+                <p class="text-xs text-gray-500 uppercase tracking-[0.2em] mb-3">
+                  Available Schedule
+                </p>
+                <div class="flex flex-wrap gap-3">
+                  <span class="text-sm font-medium border border-white/20 bg-white/5 px-3 py-1.5 text-gray-200">Mon · Wed · Sat</span>
+                  <span class="text-sm font-medium border border-white/20 bg-white/5 px-3 py-1.5 text-gray-200">5AM & 6PM</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="py-24 md:py-32 w-full relative z-10 border-t border-white/10 bg-transparent"
+    >
+      <div class="w-full px-8 md:px-16 xl:px-24 relative z-10">
+        <div class="flex flex-col lg:flex-row gap-10 lg:gap-0 items-center justify-between max-w-[1250px] mx-auto">
+          
+          <div class="lg:w-5/12 text-left pr-0 lg:pr-10 xl:pr-16 flex flex-col justify-center">
+            <h2
+              class="font-kenyan text-6xl md:text-8xl xl:text-[8rem] text-white leading-none uppercase tracking-wider mb-6 drop-shadow-md"
+            >
+              BETTER<br />VERSION<br />OF YOU.
+            </h2>
+            <p
+              class="text-gray-300 text-sm md:text-lg leading-relaxed mb-10 max-w-[500px] font-medium"
+            >
+              Growth happens outside your comfort zone. Whether you are aiming
+              for fat loss, muscle gain, or functional longevity, the key is
+              structured progression. We strip away the unnecessary, leaving
+              only what works: hard work, good recovery, and honest effort.
+            </p>
+            
+            <div class="flex gap-8 md:gap-12 justify-start items-center">
+              <div class="text-left">
+                <p class="text-white font-bold text-3xl md:text-5xl">100%</p>
+                <p class="text-gray-400 font-sans uppercase text-xs md:text-sm tracking-widest mt-2">
+                  Commitment
+                </p>
+              </div>
+              <div class="w-px h-16 bg-white/20"></div>
+              <div class="text-left">
+                <p class="text-white font-bold text-3xl md:text-5xl">Daily</p>
+                <p class="text-gray-400 font-sans uppercase text-xs md:text-sm tracking-widest mt-2">
+                  Progress
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="lg:w-7/12 w-full h-[300px] md:h-[400px] lg:h-[450px] border border-white/10 p-2 md:p-3 bg-white/5 backdrop-blur-sm rounded-none shadow-2xl flex-shrink-0"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1549476464-37392f717541?q=80&w=1500&auto=format&fit=crop"
+              class="w-full h-full object-cover grayscale opacity-90 shadow-inner"
+              alt="Performance"
+            />
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- REDESIGNED PRICING SECTION -->
+    <section
+      id="pricing"
+      class="py-24 md:py-36 w-full relative z-10 border-t border-white/10 bg-transparent"
+    >
+      <div
+        class="w-full px-8 md:px-16 xl:px-24 max-w-[1800px] mx-auto relative z-10"
+      >
+        <div class="mb-16 md:mb-24">
+          <p
+            class="font-sans text-xs md:text-sm tracking-[0.25em] uppercase text-gray-400 mb-5 flex items-center gap-3"
+          >
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 100-2h-2V7z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            PRICING
+          </p>
+          <h2
+            class="font-kenyan text-6xl md:text-8xl lg:text-[9rem] uppercase tracking-wider leading-[0.85] text-white mb-6"
+          >
+            TRAIN ON<br /><span class="text-gray-400">YOUR TERMS.</span>
+          </h2>
+          <p
+            class="text-gray-400 text-sm md:text-base max-w-xl leading-relaxed"
+          >
+            Pay once, stay flexible, or commit hard and save big. Every plan
+            gives you full access to the floor — pick what fits your grind.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 w-full items-center">
+          
+          <!-- Walk-in (Standard Outer Card) -->
+          <div
+            class="bg-[#0a0a0a] border border-white/10 p-8 md:p-10 xl:p-12 flex flex-col hover:bg-[#111] transition-colors duration-300 h-full"
+          >
+            <span
+              class="self-start text-[10px] font-bold tracking-[0.2em] uppercase border border-white/20 text-gray-400 px-3 py-1 mb-6"
+              >DAY PASS</span
+            >
+            <h3
+              class="font-kenyan text-5xl md:text-6xl uppercase tracking-wider leading-none mb-2 text-white"
+            >
+              WALK-IN
+            </h3>
+            <p class="text-gray-500 text-sm mb-8">Show up. Put in the work.</p>
+
+            <ul class="space-y-3 flex-grow mb-10">
+              <li class="flex items-center gap-3">
+                <span class="w-1.5 h-1.5 bg-gray-500 flex-shrink-0"></span>
+                <span class="text-gray-300 text-sm">Full gym floor access for the day</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="w-1.5 h-1.5 bg-gray-500 flex-shrink-0"></span>
+                <span class="text-gray-300 text-sm">All cardio & weight equipment</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="w-1.5 h-1.5 bg-gray-500 flex-shrink-0"></span>
+                <span class="text-gray-300 text-sm">No registration required</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="w-1.5 h-1.5 bg-gray-500 flex-shrink-0"></span>
+                <span class="text-gray-300 text-sm">Open 7 days a week</span>
+              </li>
+            </ul>
+
+            <div class="border-t border-white/10 pt-6 mb-6">
+              <p
+                class="text-[10px] text-gray-500 uppercase tracking-[0.2em] mb-1"
+              >
+                Starting at
+              </p>
+              <p class="font-sans font-bold text-5xl text-white">
+                ₱60
+                <span class="text-lg text-gray-400 font-normal">/ session</span>
+              </p>
+            </div>
+            <a
+              href="#"
+              class="w-full text-center border border-white/20 text-white font-sans font-bold text-xs px-6 py-4 tracking-[0.2em] uppercase hover:bg-white hover:text-black transition-colors"
+              >GET STARTED →</a
+            >
+          </div>
+
+          <!-- Monthly — HIGHLIGHTED CENTER PANEL (Scale + Contrast) -->
+          <div
+            class="relative bg-[#111111] border border-white/40 p-8 md:p-10 xl:p-14 flex flex-col transform lg:scale-[1.05] shadow-[0_0_40px_rgba(255,255,255,0.05)] z-20 h-auto"
+          >
+            <!-- Badge -->
+            <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-white text-black font-sans text-[10px] font-bold tracking-[0.2em] uppercase px-4 py-1.5">
+              Most Popular
+            </div>
+
+            <!-- Inverted Tag -->
+            <span
+              class="self-start text-[10px] font-bold tracking-[0.2em] uppercase bg-white text-black px-3 py-1 mb-6"
+              >MONTHLY</span
+            >
+            <h3
+              class="font-kenyan text-5xl md:text-6xl uppercase tracking-wider leading-none mb-2 text-white"
+            >
+              ALL ACCESS
+            </h3>
+            <p class="text-gray-400 text-sm mb-8">Your consistent edge.</p>
+
+            <ul class="space-y-3 flex-grow mb-10">
+              <li class="flex items-center gap-3">
+                <span class="w-1.5 h-1.5 bg-white flex-shrink-0"></span>
+                <span class="text-gray-100 text-sm">Unlimited gym access, all month</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="w-1.5 h-1.5 bg-white flex-shrink-0"></span>
+                <span class="text-gray-100 text-sm">All group classes included</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="w-1.5 h-1.5 bg-white flex-shrink-0"></span>
+                <span class="text-gray-100 text-sm">No lock-in contract</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="w-1.5 h-1.5 bg-white flex-shrink-0"></span>
+                <span class="text-gray-100 text-sm">Full equipment access</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="w-1.5 h-1.5 bg-white flex-shrink-0"></span>
+                <span class="text-gray-100 text-sm">Cancel anytime</span>
+              </li>
+            </ul>
+
+            <div class="border-t border-white/20 pt-6 mb-6">
+              <p
+                class="text-[10px] text-gray-400 uppercase tracking-[0.2em] mb-1"
+              >
+                Starting at
+              </p>
+              <p class="font-sans font-bold text-5xl text-white">
+                ₱1,000
+                <span class="text-lg text-gray-400 font-normal">/ month</span>
+              </p>
+            </div>
+            <!-- Inverted Button -->
+            <a
+              href="#"
+              class="w-full text-center bg-white text-black font-sans font-bold text-xs px-6 py-4 tracking-[0.2em] uppercase hover:bg-gray-200 transition-colors"
+              >GET STARTED →</a
+            >
+          </div>
+
+          <!-- Annual (Standard Outer Card) -->
+          <div
+            class="bg-[#0a0a0a] border border-white/10 p-8 md:p-10 xl:p-12 flex flex-col hover:bg-[#111] transition-colors duration-300 h-full"
+          >
+            <span
+              class="self-start text-[10px] font-bold tracking-[0.2em] uppercase border border-white/20 text-gray-400 px-3 py-1 mb-6"
+              >ANNUAL</span
+            >
+            <h3
+              class="font-kenyan text-5xl md:text-6xl uppercase tracking-wider leading-none mb-2 text-white"
+            >
+              ELITE MEMBER
+            </h3>
+            <p class="text-gray-500 text-sm mb-8">
+              Full commitment. Full reward.
+            </p>
+
+            <ul class="space-y-3 flex-grow mb-10">
+              <li class="flex items-center gap-3">
+                <span class="w-1.5 h-1.5 bg-gray-500 flex-shrink-0"></span>
+                <span class="text-gray-300 text-sm">Everything in Monthly</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="w-1.5 h-1.5 bg-gray-500 flex-shrink-0"></span>
+                <span class="text-gray-300 text-sm">2 free 1-on-1 PT sessions</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="w-1.5 h-1.5 bg-gray-500 flex-shrink-0"></span>
+                <span class="text-gray-300 text-sm">Exclusive Supremo merchandise</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="w-1.5 h-1.5 bg-gray-500 flex-shrink-0"></span>
+                <span class="text-gray-300 text-sm">Priority class booking</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="w-1.5 h-1.5 bg-gray-500 flex-shrink-0"></span>
+                <span class="text-gray-300 text-sm">Best value per session</span>
+              </li>
+            </ul>
+
+            <div class="border-t border-white/10 pt-6 mb-6">
+              <p
+                class="text-[10px] text-gray-500 uppercase tracking-[0.2em] mb-1"
+              >
+                Starting at
+              </p>
+              <p class="font-sans font-bold text-5xl text-white">
+                ₱10,000
+                <span class="text-lg text-gray-400 font-normal">/ year</span>
+              </p>
+            </div>
+            <a
+              href="#"
+              class="w-full text-center border border-white/20 text-white font-sans font-bold text-xs px-6 py-4 tracking-[0.2em] uppercase hover:bg-white hover:text-black transition-colors"
+              >GET STARTED →</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="w-full text-white border-t border-white/10 overflow-hidden relative z-10 bg-transparent flex flex-col md:flex-row"
+    >
+      <div
+        class="w-full md:w-1/2 p-12 md:p-16 xl:p-32 flex flex-col justify-center"
+      >
+        <p
+          class="font-sans text-xs md:text-sm tracking-[0.2em] uppercase text-gray-400 mb-6 drop-shadow-md"
+        >
+          About The Space
+        </p>
+        <h2
+          class="font-kenyan text-7xl md:text-8xl lg:text-[8rem] xl:text-[10rem] leading-[0.85] uppercase tracking-wider mb-8 drop-shadow-lg"
+        >
+          BUILT FOR<br />REAL WORK.
+        </h2>
+        <p
+          class="text-justify text-base md:text-lg text-gray-300 leading-relaxed max-w-2xl drop-shadow-md font-medium"
+        >
+          Supremo Fitness is strictly designed for people who want serious
+          training without the fake energy. The space is raw, highly focused,
+          and systematically built for absolute consistency. Whether you are
+          heavily lifting, intensely boxing, repeatedly drilling technique, or
+          just purely putting in honest work every single day, this gym is made
+          for you.
+        </p>
+      </div>
+
+      <div
+        class="w-full md:w-1/2 h-[500px] md:h-[800px] xl:h-[900px] relative border-l border-white/10"
+      >
+        <img
+          src="https://scontent.fmnl4-2.fna.fbcdn.net/v/t39.30808-6/472746939_578091061742026_5169691273355289058_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeHYXpkW_9f6Zp91gslN4RQ8Jv5IPyKZNZMm_kg_Ipk1k_-voFbYNQ7J9hvrSHS4xQ876kn_vfJ6fd6lXpwUfIzc&_nc_ohc=zIojsheUjLMQ7kNvwGf2DQ-&_nc_oc=Adp5wdl2ND1icN0a1R81HxekmaBbyF5_YkauD4XPSEAddzTMTmejMzD8rr6DqibgxQRFjGfwdN5nG4nVXtBDduo-&_nc_zt=23&_nc_ht=scontent.fmnl4-2.fna&_nc_gid=lKbxPa8FsU5R_qfissStaQ&_nc_ss=7b2a8&oh=00_Af1y81Q2TGRZ2r8MLYeOFEzrgS5CG5nyN_t2CjRnlh1xIg&oe=69F2912C"
+          class="w-full h-full object-cover grayscale opacity-90"
+        />
+
+        <div
+          class="absolute bottom-0 left-0 w-full md:w-[85%] bg-black/60 backdrop-blur-md p-8 md:p-12 xl:p-16 border-t border-r border-white/10"
+        >
+          <p
+            class="font-sans text-xs tracking-[0.15em] uppercase text-gray-300 mb-3 drop-shadow-md"
+          >
+            Supremo Standard
+          </p>
+          <p
+            class="font-kenyan text-5xl md:text-6xl uppercase tracking-wider leading-none mb-4 text-white drop-shadow-md"
+          >
+            NO NOISE.<br />JUST WORK.
+          </p>
+          <p
+            class="text-justify text-sm md:text-base text-gray-300 leading-relaxed drop-shadow-md"
+          >
+            A training environment completely made for discipline, steady
+            progress, and constantly showing up strong regardless of your
+            background.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div
+      class="w-full h-[60vh] md:h-[80vh] relative overflow-hidden z-10 border-t border-white/10 bg-transparent"
+    >
+      <img
+        src="https://cdn.prod.website-files.com/655f1188cf5e283d9d642d99/65b1583d48a939a20cb944c3_home_section-divider_img-01-p-2000.webp"
+        class="absolute inset-0 w-full h-full object-cover grayscale opacity-90 object-center"
+        alt="Gym View"
+      />
+    </div>
+
+    <section
+    id="faq"
+      class="py-24 md:py-32 w-full text-white border-t border-white/10 relative z-10 bg-transparent"
+    >
+      <div class="w-full px-8 md:px-16 xl:px-24 relative z-10">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-16 md:gap-24 items-start"
+        >
+          <div class="text-left">
+            <p
+              class="font-sans text-sm md:text-base tracking-[0.2em] uppercase text-gray-400 mb-6 drop-shadow-md"
+            >
+              Clarifications
+            </p>
+            <h2
+              class="font-kenyan text-6xl md:text-7xl lg:text-8xl leading-[0.85] uppercase tracking-wider mb-8 drop-shadow-lg text-white"
+            >
+              FREQUENTLY<br />ASKED<br />QUESTIONS
+            </h2>
+            <p
+              class="text-justify text-gray-300 text-sm md:text-lg leading-relaxed font-sans drop-shadow-md"
+            >
+              Everything you need to definitively know before stepping into the
+              gym. If you have absolutely any other specific inquiries, feel
+              free to directly contact our staff or send us an email.
+            </p>
+          </div>
+
+          <div class="space-y-4 w-full">
+            <div
+              class="faq-entry border border-white/10 bg-white/5 backdrop-blur-sm rounded-none transition-colors hover:bg-white/10 shadow-lg"
+            >
+              <button
+                type="button"
+                class="faq-item text-left w-full px-8 py-6 md:py-8 flex justify-between items-center focus:outline-none"
+                aria-expanded="false"
+              >
+                <span
+                  class="font-sans font-bold text-lg md:text-xl uppercase text-white"
+                  >What classes can I join?</span
+                >
+                <span
+                  class="faq-plus w-8 h-8 flex-shrink-0 flex items-center justify-center bg-white text-black rounded-none text-2xl font-bold transition-transform duration-300"
+                  data-plus
+                  >+</span
+                >
+              </button>
+              <div
+                class="faq-answer max-h-0 overflow-hidden transition-all duration-500 ease-in-out"
+              >
+                <div
+                  class="px-8 pb-6 md:pb-8 pt-4 border-t border-white/10 text-justify text-sm md:text-base text-gray-300 leading-relaxed"
+                >
+                  You can join boxing, MMA, GX class, TRX, zumba, and HIIT or
+                  circuit training sessions depending on your specific physical
+                  goals and personal daily schedule. All classes are thoroughly
+                  led by experienced professionals.
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="faq-entry border border-white/10 bg-white/5 backdrop-blur-sm rounded-none transition-colors hover:bg-white/10 shadow-lg"
+            >
+              <button
+                type="button"
+                class="faq-item text-left w-full px-8 py-6 md:py-8 flex justify-between items-center focus:outline-none"
+                aria-expanded="false"
+              >
+                <span
+                  class="font-sans font-bold text-lg md:text-xl uppercase text-white"
+                  >Do you accept beginners?</span
+                >
+                <span
+                  class="faq-plus w-8 h-8 flex-shrink-0 flex items-center justify-center bg-white text-black rounded-none text-2xl font-bold transition-transform duration-300"
+                  data-plus
+                  >+</span
+                >
+              </button>
+              <div
+                class="faq-answer max-h-0 overflow-hidden transition-all duration-500 ease-in-out"
+              >
+                <div
+                  class="px-8 pb-6 md:pb-8 pt-4 border-t border-white/10 text-justify text-sm md:text-base text-gray-300 leading-relaxed"
+                >
+                  Yes, beginners are absolutely welcome. Our dedicated coaches
+                  can meticulously guide you through the fundamental basics so
+                  you can effectively start safely and successfully build up
+                  your confidence at your own manageable pace.
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="faq-entry border border-white/10 bg-white/5 backdrop-blur-sm rounded-none transition-colors hover:bg-white/10 shadow-lg"
+            >
+              <button
+                type="button"
+                class="faq-item text-left w-full px-8 py-6 md:py-8 flex justify-between items-center focus:outline-none"
+                aria-expanded="false"
+              >
+                <span
+                  class="font-sans font-bold text-lg md:text-xl uppercase text-white"
+                  >Can I train combat & fitness together?</span
+                >
+                <span
+                  class="faq-plus w-8 h-8 flex-shrink-0 flex items-center justify-center bg-white text-black rounded-none text-2xl font-bold transition-transform duration-300"
+                  data-plus
+                  >+</span
+                >
+              </button>
+              <div
+                class="faq-answer max-h-0 overflow-hidden transition-all duration-500 ease-in-out"
+              >
+                <div
+                  class="px-8 pb-6 md:pb-8 pt-4 border-t border-white/10 text-justify text-sm md:text-base text-gray-300 leading-relaxed"
+                >
+                  Yes. Supremo Fitness is fundamentally built for both robust
+                  strength and conditioning work as well as intense
+                  combat-focused training, so you can dynamically mix various
+                  classes seamlessly based on your hybrid program.
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="faq-entry border border-white/10 bg-white/5 backdrop-blur-sm rounded-none transition-colors hover:bg-white/10 shadow-lg"
+            >
+              <button
+                type="button"
+                class="faq-item text-left w-full px-8 py-6 md:py-8 flex justify-between items-center focus:outline-none"
+                aria-expanded="false"
+              >
+                <span
+                  class="font-sans font-bold text-lg md:text-xl uppercase text-white"
+                  >Do you offer walk-in sessions?</span
+                >
+                <span
+                  class="faq-plus w-8 h-8 flex-shrink-0 flex items-center justify-center bg-white text-black rounded-none text-2xl font-bold transition-transform duration-300"
+                  data-plus
+                  >+</span
+                >
+              </button>
+              <div
+                class="faq-answer max-h-0 overflow-hidden transition-all duration-500 ease-in-out"
+              >
+                <div
+                  class="px-8 pb-6 md:pb-8 pt-4 border-t border-white/10 text-justify text-sm md:text-base text-gray-300 leading-relaxed"
+                >
+                  Yes, casual walk-ins are continually welcome every single day.
+                  Diverse package rates are also structurally available for
+                  members who ultimately want to train more consistently through
+                  multiple engaging sessions per week.
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="faq-entry border border-white/10 bg-white/5 backdrop-blur-sm rounded-none transition-colors hover:bg-white/10 shadow-lg"
+            >
+              <button
+                type="button"
+                class="faq-item text-left w-full px-8 py-6 md:py-8 flex justify-between items-center focus:outline-none"
+                aria-expanded="false"
+              >
+                <span
+                  class="font-sans font-bold text-lg md:text-xl uppercase text-white"
+                  >What should I bring?</span
+                >
+                <span
+                  class="faq-plus w-8 h-8 flex-shrink-0 flex items-center justify-center bg-white text-black rounded-none text-2xl font-bold transition-transform duration-300"
+                  data-plus
+                  >+</span
+                >
+              </button>
+              <div
+                class="faq-answer max-h-0 overflow-hidden transition-all duration-500 ease-in-out"
+              >
+                <div
+                  class="px-8 pb-6 md:pb-8 pt-4 border-t border-white/10 text-justify text-sm md:text-base text-gray-300 leading-relaxed"
+                >
+                  Please reliably bring comfortable athletic workout clothes,
+                  proper hydration, a clean personal towel, and any specific
+                  personal training gear you already own. If you are entirely
+                  unsure, just start simple and directly ask the gym staff.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="text-white border-t border-white/10 relative z-10 bg-black font-sans"
+    >
+      <div class="w-full px-8 md:px-16 xl:px-24 py-16 md:py-24">
+        <div class="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-12 lg:gap-16">
+          <div
+            class="flex flex-col items-center lg:items-start text-center lg:text-left"
+          >
+            <a
+              href="index.html"
+              class="flex items-center gap-4 mb-6 hover:opacity-80 transition-opacity"
+            >
+              <img
+                src="assets/Transparent logo.png"
+                alt="Logo"
+                class="w-12 h-auto"
+              />
+              <span class="font-kenyan text-4xl tracking-widest uppercase mt-1"
+                >SUPREMO FITNESS</span
+              >
+            </a>
+            <p class="text-gray-400 text-sm leading-relaxed max-w-sm mb-8">
+              The home for serious training in Karuhatan, Valenzuela. Built for
+              real work, driven by strength.
+            </p>
+            <div class="flex items-center gap-6">
+              <a
+                href="https://www.instagram.com/supremofitness/"
+                class="text-gray-400 hover:text-white transition-colors"
+                aria-label="Instagram"
+              >
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path
+                    d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                  ></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
+
+              <a
+                href="https://www.facebook.com/profile.php?id=100086234115223"
+                class="text-gray-400 hover:text-white transition-colors"
+                aria-label="Facebook"
+              >
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="w-full grid grid-cols-2 md:grid-cols-3 gap-8">
+            <div>
+              <h4
+                class="text-sm font-bold uppercase tracking-[0.15em] text-gray-400 mb-6"
+              >
+                Navigate
+              </h4>
+              <ul class="space-y-4 text-base">
+                <li>
+                  <a
+                    href="index.html"
+                    class="hover:text-gray-300 transition-colors"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="about.html"
+                    class="hover:text-gray-300 transition-colors"
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#classes"
+                    class="hover:text-gray-300 transition-colors"
+                    >Classes</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4
+                class="text-sm font-bold uppercase tracking-[0.15em] text-gray-400 mb-6"
+              >
+                Training
+              </h4>
+              <ul class="space-y-4 text-base">
+                <li>
+                  <a href="#classes" class="hover:text-gray-300 transition-colors"
+                    >Personal Training</a
+                  >
+                </li>
+                <li>
+                  <a href="#pricing" class="hover:text-gray-300 transition-colors"
+                    >Pricing</a
+                  >
+                </li>
+                <li>
+                  <a href="#faq" class="hover:text-gray-300 transition-colors"
+                    >FAQ</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4
+                class="text-sm font-bold uppercase tracking-[0.15em] text-gray-400 mb-6"
+              >
+                Company
+              </h4>
+              <ul class="space-y-4 text-base">
+                <li>
+                  <a href="#" class="hover:text-gray-300 transition-colors"
+                    >Privacy Policy</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="hover:text-gray-300 transition-colors"
+                    >Terms of Service</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="mt-16 pt-8 border-t border-white/10 flex justify-between items-center"
+        >
+          <p class="text-gray-500 text-sm">Supremo Fitness &copy; 2026</p>
+          <a
+            href="#navbar"
+            class="text-gray-400 hover:text-white transition-colors flex items-center gap-2 text-sm font-bold uppercase tracking-widest"
+          >
+            Back to Top
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M5 15l7-7 7 7"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
