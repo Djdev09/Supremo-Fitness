@@ -1,0 +1,706 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing | Supremo Fitness</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+  </head>
+
+  <body
+    class="antialiased relative z-0 bg-transparent text-white overflow-x-hidden"
+  >
+    <!-- Background Global Glows -->
+    <div
+      class="fixed inset-0 z-[-1] pointer-events-none overflow-hidden bg-[#111111]"
+    >
+      <div
+        class="absolute top-[5%] left-[5%] w-[350px] md:w-[650px] h-[350px] md:h-[650px] bg-[#ff00a0] opacity-[0.06] rounded-full blur-[100px] md:blur-[140px] mix-blend-screen transform-gpu"
+      ></div>
+      <div
+        class="absolute bottom-[5%] right-[5%] w-[350px] md:w-[650px] h-[350px] md:h-[650px] bg-[#00ffff] opacity-[0.06] rounded-full blur-[100px] md:blur-[140px] mix-blend-screen transform-gpu"
+      ></div>
+    </div>
+
+    <!-- HEADER/NAVBAR -->
+    <header
+      id="navbar"
+      class="fixed top-0 left-0 w-full z-50 backdrop-blur-md text-white border-b border-white/10 transition-all duration-300 h-16 md:h-20"
+    >
+      <div class="w-full flex items-center justify-between h-full">
+        <div
+          class="flex-shrink-0 flex items-center h-full pl-6 md:pl-16 xl:pl-24"
+        >
+          <!-- Na-update: May drop shadow na ang buong link -->
+          <a
+            href="index.html"
+            class="flex items-center gap-3 text-white hover:text-gray-300 transition-colors z-50 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
+          >
+            <!-- Na-update: Mas malaking logo image (w-10 md:w-12) -->
+            <img
+              src="assets/Transparent logo.png"
+              alt="Logo"
+              class="w-10 md:w-12 h-auto object-contain"
+            />
+            <!-- Na-update: May text-shadow na para kitang-kita sa white background -->
+            <span
+              class="font-kenyan text-2xl md:text-3xl tracking-widest uppercase whitespace-nowrap mt-1[text-shadow:_0_2px_8px_rgb(0_0_0_/_1)]"
+              >SUPREMO FITNESS</span
+            >
+          </a>
+        </div>
+
+        <nav 
+          class="hidden lg:flex flex-1 justify-end items-center h-full space-x-12 pr-6 md:pr-16 xl:pr-24">
+          <a
+            href="index.html#classes"
+            class="font-sans text-[15px] font-bold tracking-[0.1em] uppercase text-white hover:text-gray-300 transition-colors"
+            >Classes</a
+          >
+          <a
+            href="pricing.html"
+            class="font-sans text-[15px] font-bold tracking-[0.1em] uppercase text-white hover:text-gray-300 transition-colors"
+            >Pricing</a
+          >
+          <a
+            href="about.html"
+            class="font-sans text-[15px] font-bold tracking-[0.1em] uppercase text-white hover:text-gray-300 transition-colors"
+            >About Us</a
+          >
+        </nav>
+
+        <div class="flex lg:hidden items-center h-full pr-6 md:pr-16">
+          <button
+            id="nav-toggle"
+            type="button"
+            class="flex flex-col justify-center items-center w-8 h-8 space-y-1.5 focus:outline-none"
+          >
+            <span
+              class="block w-6 h-[2px] bg-white transition-transform duration-300 origin-center"
+            ></span>
+            <span
+              class="block w-6 h-[2px] bg-white transition-opacity duration-300"
+            ></span>
+            <span
+              class="block w-6 h-[2px] bg-white transition-transform duration-300 origin-center"
+            ></span>
+          </button>
+        </div>
+      </div>
+
+      <div
+        id="nav-panel"
+        class="absolute top-full left-0 w-full bg-black/95 backdrop-blur-md border-b border-white/10 hidden flex-col py-6 px-6 gap-6 shadow-xl rounded-none"
+      >
+        <a
+          href="index.html#classes"
+          class="font-sans text-sm font-bold tracking-[0.1em] uppercase text-white hover:text-gray-300 block w-full text-center transition-colors"
+          >Classes</a
+        >
+        <a
+          href="prica.html"
+          class="font-sans text-sm font-bold tracking-[0.1em] uppercase text-white hover:text-gray-300 block w-full text-center transition-colors"
+          >Pricing</a
+        >
+        <a
+          href="about.html"
+          class="font-sans text-sm font-bold tracking-[0.1em] uppercase text-white hover:text-gray-300 block w-full text-center transition-colors"
+          >About Us</a
+        >
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <main class="relative min-h-[100dvh] md:min-h-screen w-full overflow-hidden flex items-center z-20 pt-28 pb-16 md:py-0">
+      <div
+        class="absolute inset-0 z-0"
+        style="
+          -webkit-mask-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 1) 60%,
+            rgba(0, 0, 0, 0) 100%
+          );
+          mask-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 1) 60%,
+            rgba(0, 0, 0, 0) 100%
+          );
+        "
+      >
+        <img
+          src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2000&auto=format&fit=crop"
+          alt="Pricing Hero"
+          class="w-full h-full hero-grayscale object-cover opacity-[0.35]"
+        />
+      </div>
+
+      <div class="w-full px-8 md:px-16 xl:px-24 z-20 text-white relative">
+        <div class="w-full lg:w-3/4 xl:w-2/3">
+          <h1
+            class="font-kenyan text-7xl md:text-[9rem] lg:text-[10rem] leading-[0.85] tracking-normal mb-8 drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]"
+          >
+            <span class="block overflow-hidden"
+              ><span class="block hero-line text-white">TRAIN ON</span></span
+            >
+            <span class="block overflow-hidden"
+              ><span class="block hero-line text-white"
+                >YOUR TERMS.</span
+              ></span
+            >
+          </h1>
+
+          <p
+            class="w-full lg:max-w-2xl text-left text-gray-200 text-base md:text-xl leading-relaxed mb-10 font-sans drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] font-medium"
+          >
+            Flexible membership options designed to fit your training style. Whether you're a casual walk-in or a committed athlete, we have the perfect plan for your fitness journey.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <!-- PRICING PLANS SECTION -->
+    <section
+      id="pricing"
+      class="py-24 md:py-36 w-full relative z-10 border-t border-white/10 bg-transparent"
+    >
+      <div
+        class="w-full px-8 md:px-16 xl:px-24 max-w-[1800px] mx-auto relative z-10"
+      >
+        <div class="mb-16 md:mb-24">
+          <h2
+            class="font-kenyan text-6xl md:text-8xl lg:text-[9rem] uppercase tracking-wider leading-[0.85] text-white mb-6"
+          >
+            CHOOSE YOUR<br /><span class="text-gray-400">TRAINING STYLE.</span>
+          </h2>
+          <p
+            class="text-gray-400 text-sm md:text-base max-w-2xl leading-relaxed"
+          >
+            Every plan includes full access to our state-of-the-art facility, all equipment, and expert coaching. Pick the commitment level that matches your ambition. All members get the same high-quality training environment.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 w-full items-center">
+          
+          <!-- Walk-in (Standard Outer Card) -->
+          <div
+            class="bg-[#0a0a0a] border border-white/10 p-8 md:p-10 xl:p-12 flex flex-col hover:bg-[#111] transition-colors duration-300 h-full"
+          >
+            <span
+              class="self-start text-[10px] font-bold tracking-[0.2em] uppercase border border-white/20 text-gray-400 px-3 py-1 mb-6"
+              >DAY PASS</span
+            >
+            <h3
+              class="font-kenyan text-5xl md:text-6xl uppercase tracking-wider leading-none mb-2 text-white"
+            >
+              WALK-IN
+            </h3>
+            <p class="text-gray-500 text-sm mb-8">Perfect for trying us out or sporadic sessions.</p>
+
+            <ul class="space-y-3 flex-grow mb-10">
+              <li class="flex items-center gap-3">
+                <span class="w-1.5 h-1.5 bg-gray-500 flex-shrink-0"></span>
+                <span class="text-gray-300 text-sm">Full gym floor access for the day</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="w-1.5 h-1.5 bg-gray-500 flex-shrink-0"></span>
+                <span class="text-gray-300 text-sm">All cardio & weight equipment</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="w-1.5 h-1.5 bg-gray-500 flex-shrink-0"></span>
+                <span class="text-gray-300 text-sm">No registration required</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="w-1.5 h-1.5 bg-gray-500 flex-shrink-0"></span>
+                <span class="text-gray-300 text-sm">Open 7 days a week</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="w-1.5 h-1.5 bg-gray-500 flex-shrink-0"></span>
+                <span class="text-gray-300 text-sm">Coaching available (minimal)</span>
+              </li>
+            </ul>
+
+            <div class="border-t border-white/10 pt-6">
+              <p
+                class="text-[10px] text-gray-500 uppercase tracking-[0.2em] mb-1"
+              >
+                Starting at
+              </p>
+              <p class="font-sans font-bold text-5xl text-white">
+                ₱60
+                <span class="text-lg text-gray-400 font-normal">/ session</span>
+              </p>
+              <p class="text-xs text-gray-500 mt-2">Best for casual training</p>
+            </div>
+          </div>
+
+          <!-- Monthly — HIGHLIGHTED CENTER PANEL (Scale + Contrast) -->
+          <div
+            class="relative bg-[#111111] border border-white/40 p-8 md:p-10 xl:p-14 flex flex-col transform lg:scale-[1.05] shadow-[0_0_40px_rgba(255,255,255,0.05)] z-20 h-auto"
+          >
+            <!-- Inverted Tag -->
+            <span
+              class="self-start text-[10px] font-bold tracking-[0.2em] uppercase bg-white text-black px-3 py-1 mb-6"
+              >MONTHLY</span
+            >
+            <h3
+              class="font-kenyan text-5xl md:text-6xl uppercase tracking-wider leading-none mb-2 text-white"
+            >
+              GYM ACCESS
+            </h3>
+            <p class="text-gray-400 text-sm mb-8">Your consistent edge. Build real momentum.</p>
+
+            <ul class="space-y-3 flex-grow mb-10">
+              <li class="flex items-center gap-3">
+                <span class="w-1.5 h-1.5 bg-white flex-shrink-0"></span>
+                <span class="text-gray-100 text-sm">Unlimited gym access, all month</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="w-1.5 h-1.5 bg-white flex-shrink-0"></span>
+                <span class="text-gray-100 text-sm">Built for long-term progress</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="w-1.5 h-1.5 bg-white flex-shrink-0"></span>
+                <span class="text-gray-100 text-sm">Flexible schedule — train anytime</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="w-1.5 h-1.5 bg-white flex-shrink-0"></span>
+                <span class="text-gray-100 text-sm">Full equipment access</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="w-1.5 h-1.5 bg-white flex-shrink-0"></span>
+                <span class="text-gray-100 text-sm">Expert coaching included</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="w-1.5 h-1.5 bg-white flex-shrink-0"></span>
+                <span class="text-gray-100 text-sm">Cancel anytime (no lock-in)</span>
+              </li>
+            </ul>
+
+            <div class="border-t border-white/20 pt-6">
+              <p
+                class="text-[10px] text-gray-400 uppercase tracking-[0.2em] mb-1"
+              >
+                Starting at
+              </p>
+              <p class="font-sans font-bold text-5xl text-white">
+                ₱1,000
+                <span class="text-lg text-gray-400 font-normal">/ month</span>
+              </p>
+              <p class="text-xs text-gray-400 mt-2">Recommended for regular training</p>
+            </div>
+          </div>
+
+          <!-- Annual (Standard Outer Card) -->
+          <div
+            class="bg-[#0a0a0a] border border-white/10 p-8 md:p-10 xl:p-12 flex flex-col hover:bg-[#111] transition-colors duration-300 h-full"
+          >
+            <span
+              class="self-start text-[10px] font-bold tracking-[0.2em] uppercase border border-white/20 text-gray-400 px-3 py-1 mb-6"
+              >ANNUAL</span
+            >
+            <h3
+              class="font-kenyan text-5xl md:text-6xl uppercase tracking-wider leading-none mb-2 text-white"
+            >
+              ELITE MEMBER
+            </h3>
+            <p class="text-gray-500 text-sm mb-8">
+              Full commitment. Full premium benefits. Best value.
+            </p>
+
+            <ul class="space-y-3 flex-grow mb-10">
+              <li class="flex items-center gap-3">
+                <span class="w-1.5 h-1.5 bg-gray-500 flex-shrink-0"></span>
+                <span class="text-gray-300 text-sm">Everything in the Monthly Plan</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="w-1.5 h-1.5 bg-gray-500 flex-shrink-0"></span>
+                <span class="text-gray-300 text-sm">4 free 1-on-1 PT sessions</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="w-1.5 h-1.5 bg-gray-500 flex-shrink-0"></span>
+                <span class="text-gray-300 text-sm">Priority class booking</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="w-1.5 h-1.5 bg-gray-500 flex-shrink-0"></span>
+                <span class="text-gray-300 text-sm">Exclusive Supremo merchandise</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="w-1.5 h-1.5 bg-gray-500 flex-shrink-0"></span>
+                <span class="text-gray-300 text-sm">Best value per session</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="w-1.5 h-1.5 bg-gray-500 flex-shrink-0"></span>
+                <span class="text-gray-300 text-sm">Save 30% vs monthly rate</span>
+              </li>
+            </ul>
+
+            <div class="border-t border-white/10 pt-6">
+              <p
+                class="text-[10px] text-gray-500 uppercase tracking-[0.2em] mb-1"
+              >
+                Starting at
+              </p>
+              <p class="font-sans font-bold text-5xl text-white">
+                ₱10,000
+                <span class="text-lg text-gray-400 font-normal">/ year</span>
+              </p>
+              <p class="text-xs text-gray-500 mt-2">Serious athletes. Maximum savings.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PREMIUM FEATURES SECTION -->
+    <section class="w-full text-white border-t border-white/10 overflow-hidden relative z-10 bg-transparent py-24 md:py-32">
+      <div class="w-full px-8 md:px-16 xl:px-24 max-w-[1800px] mx-auto">
+        <div class="mb-20">
+          <h2
+            class="font-kenyan text-6xl md:text-8xl uppercase tracking-wider leading-[0.85] text-white"
+          >
+            WHAT SETS<br /><span class="text-gray-400">US APART.</span>
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+          <!-- Feature 1 -->
+          <div class="border border-white/10 p-8 hover:border-white/30 transition-all hover:bg-white/5 duration-300">
+            <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center mb-6">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+            </div>
+            <h3 class="font-kenyan text-2xl md:text-3xl uppercase tracking-wider mb-3">Expert Coaching</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Certified coaches on-site to guide your training journey, fix your form, and push you toward your goals safely and effectively.
+            </p>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="border border-white/10 p-8 hover:border-white/30 transition-all hover:bg-white/5 duration-300">
+            <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center mb-6">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+              </svg>
+            </div>
+            <h3 class="font-kenyan text-2xl md:text-3xl uppercase tracking-wider mb-3">State-of-the-Art Equipment</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Premium strength machines, free weights, cardio equipment, and specialized gear for boxing, MMA, and functional training.
+            </p>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="border border-white/10 p-8 hover:border-white/30 transition-all hover:bg-white/5 duration-300">
+            <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center mb-6">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h3 class="font-kenyan text-2xl md:text-3xl uppercase tracking-wider mb-3">No Long-Term Contracts</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Pay monthly or annually with complete flexibility. Cancel anytime. Your training, your rules. No hidden fees.
+            </p>
+          </div>
+
+          <!-- Feature 4 -->
+          <div class="border border-white/10 p-8 hover:border-white/30 transition-all hover:bg-white/5 duration-300">
+            <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center mb-6">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+              </svg>
+            </div>
+            <h3 class="font-kenyan text-2xl md:text-3xl uppercase tracking-wider mb-3">Always Open</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Train 7 days a week, early mornings to late evenings. No restrictions. Your schedule, your pace. Just show up and grind.
+            </p>
+          </div>
+
+          <!-- Feature 5 -->
+          <div class="border border-white/10 p-8 hover:border-white/30 transition-all hover:bg-white/5 duration-300">
+            <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center mb-6">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.856-1.487M15 10a3 3 0 11-6 0 3 3 0 016 0zM15 20H9m6 0h.01"></path>
+              </svg>
+            </div>
+            <h3 class="font-kenyan text-2xl md:text-3xl uppercase tracking-wider mb-3">Supportive Community</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Train alongside serious athletes and fitness enthusiasts. A welcoming culture that pushes each other to be better every day.
+            </p>
+          </div>
+
+          <!-- Feature 6 -->
+          <div class="border border-white/10 p-8 hover:border-white/30 transition-all hover:bg-white/5 duration-300">
+            <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center mb-6">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h3 class="font-kenyan text-2xl md:text-3xl uppercase tracking-wider mb-3">Personal Training</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Available sessions with specialized coaches for personalized programming, form correction, and goal-specific training.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AVAILABILITY & HOURS SECTION -->
+    <section class="w-full text-white border-t border-white/10 overflow-hidden relative z-10 bg-transparent py-24 md:py-32">
+      <div class="w-full px-8 md:px-16 xl:px-24 max-w-[1800px] mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <!-- Left: Content -->
+          <div>
+            <h2
+              class="font-kenyan text-6xl md:text-7xl lg:text-8xl uppercase tracking-wider leading-[0.85] mb-8 text-white"
+            >
+              OPEN<br /><span class="text-gray-400">WHEN YOU</span><br /><span class="text-gray-400">NEED US.</span>
+            </h2>
+            <p class="text-gray-400 text-base md:text-lg leading-relaxed mb-8">
+              We're committed to accommodating your training schedule. Our facility operates throughout the week to ensure you can train whenever it fits your lifestyle—early morning grinders, late-night warriors, or weekend warriors, we're here for you.
+            </p>
+            
+            <div class="space-y-2">
+              <p class="text-white font-sans text-sm font-bold uppercase tracking-wider mb-6">Standard Hours</p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <div class="bg-white/5 border border-white/10 p-4">
+                  <p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Monday - Friday</p>
+                  <p class="text-white font-sans font-bold text-lg">5:00 AM - 11:00 PM</p>
+                </div>
+                <div class="bg-white/5 border border-white/10 p-4">
+                  <p class="text-gray-400 text-xs uppercase tracking-widest mb-1">Saturday - Sunday</p>
+                  <p class="text-white font-sans font-bold text-lg">6:00 AM - 10:00 PM</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Visual/Stats -->
+          <div class="space-y-8">
+            <div class="border border-white/10 p-8 hover:border-white/30 transition-all duration-300">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-kenyan text-2xl uppercase tracking-wider mb-2">18+ Hours Daily</h3>
+                  <p class="text-gray-400 text-sm">Extensive training windows to fit your lifestyle, morning or night.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="border border-white/10 p-8 hover:border-white/30 transition-all duration-300">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-kenyan text-2xl uppercase tracking-wider mb-2">7 Days a Week</h3>
+                  <p class="text-gray-400 text-sm">No days off. We're open every single day for your consistency.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="border border-white/10 p-8 hover:border-white/30 transition-all duration-300">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-kenyan text-2xl uppercase tracking-wider mb-2">Flexible Pricing</h3>
+                  <p class="text-gray-400 text-sm">Walk in anytime or get a monthly/annual pass. Choose your commitment level.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer
+      class="text-white border-t border-white/10 relative z-10 bg-black font-sans"
+    >
+      <div class="w-full px-8 md:px-16 xl:px-24 py-16 md:py-24">
+        <div class="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-12 lg:gap-16">
+          <div
+            class="flex flex-col items-center lg:items-start text-center lg:text-left"
+          >
+            <a
+              href="index.html"
+              class="flex items-center gap-4 mb-6 hover:opacity-80 transition-opacity"
+            >
+              <img
+                src="assets/Transparent logo.png"
+                alt="Logo"
+                class="w-12 h-auto"
+              />
+              <span class="font-kenyan text-4xl tracking-widest uppercase mt-1"
+                >SUPREMO FITNESS</span
+              >
+            </a>
+            <p class="text-gray-400 text-sm leading-relaxed max-w-sm mb-8">
+              The home for serious training in Karuhatan, Valenzuela. Built for
+              real work, driven by strength.
+            </p>
+            <div class="flex items-center gap-6">
+              <a
+                href="https://www.instagram.com/supremofitness/"
+                class="text-gray-400 hover:text-white transition-colors"
+                aria-label="Instagram"
+              >
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path
+                    d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                  ></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
+
+              <a
+                href="https://www.facebook.com/profile.php?id=100086234115223"
+                class="text-gray-400 hover:text-white transition-colors"
+                aria-label="Facebook"
+              >
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="w-full grid grid-cols-2 md:grid-cols-3 gap-8">
+            <div>
+              <h4
+                class="text-sm font-bold uppercase tracking-[0.15em] text-gray-400 mb-6"
+              >
+                Navigate
+              </h4>
+              <ul class="space-y-4 text-base">
+                <li>
+                  <a
+                    href="index.html"
+                    class="hover:text-gray-300 transition-colors"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="about.html"
+                    class="hover:text-gray-300 transition-colors"
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="index.html#classes"
+                    class="hover:text-gray-300 transition-colors"
+                    >Classes</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4
+                class="text-sm font-bold uppercase tracking-[0.15em] text-gray-400 mb-6"
+              >
+                Training
+              </h4>
+              <ul class="space-y-4 text-base">
+                <li>
+                  <a href="index.html#classes" class="hover:text-gray-300 transition-colors"
+                    >Personal Training</a
+                  >
+                </li>
+                <li>
+                  <a href="pricing.html" class="hover:text-gray-300 transition-colors"
+                    >Pricing</a
+                  >
+                </li>
+                <li>
+                  <a href="index.html#faq" class="hover:text-gray-300 transition-colors"
+                    >FAQ</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4
+                class="text-sm font-bold uppercase tracking-[0.15em] text-gray-400 mb-6"
+              >
+                Company
+              </h4>
+              <ul class="space-y-4 text-base">
+                <li>
+                  <a href="privacy.html" class="hover:text-gray-300 transition-colors"
+                    >Privacy Policy</a
+                  >
+                </li>
+                <li>
+                  <a href="terms.html" class="hover:text-gray-300 transition-colors"
+                    >Terms of Service</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="mt-16 pt-8 border-t border-white/10 flex justify-between items-center"
+        >
+          <p class="text-gray-500 text-sm">Supremo Fitness &copy; 2026</p>
+          <a
+            href="#navbar"
+            onclick="document.documentElement.scrollTop = 0; document.body.scrollTop = 0; window.scrollTo({top: 0, behavior: 'smooth'}); return false;"
+            class="text-gray-400 hover:text-white transition-colors flex items-center gap-2 text-sm font-bold uppercase tracking-widest cursor-pointer"
+          >
+            Back to Top
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M5 15l7-7 7 7"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
