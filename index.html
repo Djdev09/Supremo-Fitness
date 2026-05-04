@@ -38,17 +38,20 @@
         <div
           class="flex-shrink-0 flex items-center h-full pl-6 md:pl-16 xl:pl-24"
         >
+          <!-- Na-update: May drop shadow na ang buong link -->
           <a
             href="index.html"
-            class="flex items-center gap-3 text-white hover:text-gray-300 transition-colors z-50"
+            class="flex items-center gap-3 text-white hover:text-gray-300 transition-colors z-50 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
           >
+            <!-- Na-update: Mas malaking logo image (w-10 md:w-12) -->
             <img
               src="assets/Transparent logo.png"
               alt="Logo"
-              class="w-8 md:w-10 h-auto object-contain"
+              class="w-10 md:w-12 h-auto object-contain"
             />
+            <!-- Na-update: May text-shadow na para kitang-kita sa white background -->
             <span
-              class="font-kenyan text-2xl md:text-3xl tracking-widest uppercase whitespace-nowrap mt-1"
+              class="font-kenyan text-2xl md:text-3xl tracking-widest uppercase whitespace-nowrap mt-1[text-shadow:_0_2px_8px_rgb(0_0_0_/_1)]"
               >SUPREMO FITNESS</span
             >
           </a>
@@ -62,14 +65,14 @@
           >Classes</a
         >
         <a
+          href="pricing.html"
+          class="font-sans text-[15px] font-bold tracking-[0.1em] uppercase text-white hover:text-gray-300 transition-colors"
+          >Pricing</a
+        >
+        <a
           href="about.html"
           class="font-sans text-[15px] font-bold tracking-[0.1em] uppercase text-white hover:text-gray-300 transition-colors"
           >About Us</a
-        >
-        <a
-          href="index.html#pricing"
-          class="font-sans text-[15px] font-bold tracking-[0.1em] uppercase text-white hover:text-gray-300 transition-colors"
-          >Pricing</a
         >
       </nav>
 
@@ -102,14 +105,14 @@
           >Classes</a
         >
         <a
+          href="pricing.html"
+          class="font-sans text-sm font-bold tracking-[0.1em] uppercase text-white hover:text-gray-300 block w-full text-center transition-colors"
+          >Pricing</a
+        >
+        <a
           href="about.html"
           class="font-sans text-sm font-bold tracking-[0.1em] uppercase text-white hover:text-gray-300 block w-full text-center transition-colors"
           >About Us</a
-        >
-        <a
-          href="#pricing"
-          class="font-sans text-sm font-bold tracking-[0.1em] uppercase text-white hover:text-gray-300 block w-full text-center transition-colors"
-          >Pricing</a
         >
       </div>
     </header>
@@ -527,202 +530,6 @@
       </div>
     </section>
 
-    <!-- REDESIGNED PRICING SECTION -->
-    <section
-      id="pricing"
-      class="py-24 md:py-36 w-full relative z-10 border-t border-white/10 bg-transparent"
-    >
-      <div
-        class="w-full px-8 md:px-16 xl:px-24 max-w-[1800px] mx-auto relative z-10"
-      >
-        <div class="mb-16 md:mb-24">
-          <p
-            class="font-sans text-xs md:text-sm tracking-[0.25em] uppercase text-gray-400 mb-5 flex items-center gap-3"
-          >
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-              <path
-                fill-rule="evenodd"
-                d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 100-2h-2V7z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-            PRICING
-          </p>
-          <h2
-            class="font-kenyan text-6xl md:text-8xl lg:text-[9rem] uppercase tracking-wider leading-[0.85] text-white mb-6"
-          >
-            TRAIN ON<br /><span class="text-gray-400">YOUR TERMS.</span>
-          </h2>
-          <p
-            class="text-gray-400 text-sm md:text-base max-w-xl leading-relaxed"
-          >
-            Pay once, stay flexible, or commit hard and save big. Every plan
-            gives you full access to the floor — pick what fits your grind.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 w-full items-center">
-          
-          <!-- Walk-in (Standard Outer Card) -->
-          <div
-            class="bg-[#0a0a0a] border border-white/10 p-8 md:p-10 xl:p-12 flex flex-col hover:bg-[#111] transition-colors duration-300 h-full"
-          >
-            <span
-              class="self-start text-[10px] font-bold tracking-[0.2em] uppercase border border-white/20 text-gray-400 px-3 py-1 mb-6"
-              >DAY PASS</span
-            >
-            <h3
-              class="font-kenyan text-5xl md:text-6xl uppercase tracking-wider leading-none mb-2 text-white"
-            >
-              WALK-IN
-            </h3>
-            <p class="text-gray-500 text-sm mb-8">Show up. Put in the work.</p>
-
-            <ul class="space-y-3 flex-grow mb-10">
-              <li class="flex items-center gap-3">
-                <span class="w-1.5 h-1.5 bg-gray-500 flex-shrink-0"></span>
-                <span class="text-gray-300 text-sm">Full gym floor access for the day</span>
-              </li>
-              <li class="flex items-center gap-3">
-                <span class="w-1.5 h-1.5 bg-gray-500 flex-shrink-0"></span>
-                <span class="text-gray-300 text-sm">All cardio & weight equipment</span>
-              </li>
-              <li class="flex items-center gap-3">
-                <span class="w-1.5 h-1.5 bg-gray-500 flex-shrink-0"></span>
-                <span class="text-gray-300 text-sm">No registration required</span>
-              </li>
-              <li class="flex items-center gap-3">
-                <span class="w-1.5 h-1.5 bg-gray-500 flex-shrink-0"></span>
-                <span class="text-gray-300 text-sm">Open 7 days a week</span>
-              </li>
-            </ul>
-
-            <div class="border-t border-white/10 pt-6">
-              <p
-                class="text-[10px] text-gray-500 uppercase tracking-[0.2em] mb-1"
-              >
-                Starting at
-              </p>
-              <p class="font-sans font-bold text-5xl text-white">
-                ₱60
-                <span class="text-lg text-gray-400 font-normal">/ session</span>
-              </p>
-            </div>
-          </div>
-
-          <!-- Monthly — HIGHLIGHTED CENTER PANEL (Scale + Contrast) -->
-          <div
-            class="relative bg-[#111111] border border-white/40 p-8 md:p-10 xl:p-14 flex flex-col transform lg:scale-[1.05] shadow-[0_0_40px_rgba(255,255,255,0.05)] z-20 h-auto"
-          >
-            <!-- Badge -->
-            <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-white text-black font-sans text-[10px] font-bold tracking-[0.2em] uppercase px-4 py-1.5">
-              Most Popular
-            </div>
-
-            <!-- Inverted Tag -->
-            <span
-              class="self-start text-[10px] font-bold tracking-[0.2em] uppercase bg-white text-black px-3 py-1 mb-6"
-              >MONTHLY</span
-            >
-            <h3
-              class="font-kenyan text-5xl md:text-6xl uppercase tracking-wider leading-none mb-2 text-white"
-            >
-              GYM ACCESS
-            </h3>
-            <p class="text-gray-400 text-sm mb-8">Your consistent edge.</p>
-
-            <ul class="space-y-3 flex-grow mb-10">
-              <li class="flex items-center gap-3">
-                <span class="w-1.5 h-1.5 bg-white flex-shrink-0"></span>
-                <span class="text-gray-100 text-sm">Unlimited gym access </span>
-              </li>
-              <li class="flex items-center gap-3">
-                <span class="w-1.5 h-1.5 bg-white flex-shrink-0"></span>
-                <span class="text-gray-100 text-sm">Built for long-term progress</span>
-              </li>
-              <li class="flex items-center gap-3">
-                <span class="w-1.5 h-1.5 bg-white flex-shrink-0"></span>
-                <span class="text-gray-100 text-sm">Flexible schedule — train anytime</span>
-              </li>
-              <li class="flex items-center gap-3">
-                <span class="w-1.5 h-1.5 bg-white flex-shrink-0"></span>
-                <span class="text-gray-100 text-sm">Full equipment access</span>
-              </li>
-              <li class="flex items-center gap-3">
-                <span class="w-1.5 h-1.5 bg-white flex-shrink-0"></span>
-                <span class="text-gray-100 text-sm">No cancellation</span>
-              </li>
-            </ul>
-
-            <div class="border-t border-white/20 pt-6">
-              <p
-                class="text-[10px] text-gray-400 uppercase tracking-[0.2em] mb-1"
-              >
-                Starting at
-              </p>
-              <p class="font-sans font-bold text-5xl text-white">
-                ₱1,000
-                <span class="text-lg text-gray-400 font-normal">/ month</span>
-              </p>
-            </div>
-          </div>
-
-          <!-- Annual (Standard Outer Card) -->
-          <div
-            class="bg-[#0a0a0a] border border-white/10 p-8 md:p-10 xl:p-12 flex flex-col hover:bg-[#111] transition-colors duration-300 h-full"
-          >
-            <span
-              class="self-start text-[10px] font-bold tracking-[0.2em] uppercase border border-white/20 text-gray-400 px-3 py-1 mb-6"
-              >ANNUAL</span
-            >
-            <h3
-              class="font-kenyan text-5xl md:text-6xl uppercase tracking-wider leading-none mb-2 text-white"
-            >
-              ELITE MEMBER
-            </h3>
-            <p class="text-gray-500 text-sm mb-8">
-              Full commitment. Full reward.
-            </p>
-
-            <ul class="space-y-3 flex-grow mb-10">
-              <li class="flex items-center gap-3">
-                <span class="w-1.5 h-1.5 bg-gray-500 flex-shrink-0"></span>
-                <span class="text-gray-300 text-sm">Everything in the Monthly Plan</span>
-              </li>
-              <li class="flex items-center gap-3">
-                <span class="w-1.5 h-1.5 bg-gray-500 flex-shrink-0"></span>
-                <span class="text-gray-300 text-sm">2 free 1-on-1 PT sessions</span>
-              </li>
-              <li class="flex items-center gap-3">
-                <span class="w-1.5 h-1.5 bg-gray-500 flex-shrink-0"></span>
-                <span class="text-gray-300 text-sm">Exclusive Supremo merchandise</span>
-              </li>
-              <li class="flex items-center gap-3">
-                <span class="w-1.5 h-1.5 bg-gray-500 flex-shrink-0"></span>
-                <span class="text-gray-300 text-sm">Priority class</span>
-              </li>
-              <li class="flex items-center gap-3">
-                <span class="w-1.5 h-1.5 bg-gray-500 flex-shrink-0"></span>
-                <span class="text-gray-300 text-sm">Best value per session</span>
-              </li>
-            </ul>
-
-            <div class="border-t border-white/10 pt-6">
-              <p
-                class="text-[10px] text-gray-500 uppercase tracking-[0.2em] mb-1"
-              >
-                Starting at
-              </p>
-              <p class="font-sans font-bold text-5xl text-white">
-                ₱10,000
-                <span class="text-lg text-gray-400 font-normal">/ year</span>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section
       class="w-full text-white border-t border-white/10 overflow-hidden relative z-10 bg-transparent flex flex-col md:flex-row"
     >
@@ -754,9 +561,11 @@
       <div
         class="w-full md:w-1/2 h-[500px] md:h-[800px] xl:h-[900px] relative border-l border-white/10"
       >
+        <!-- Pinalitan ko ang broken Facebook link ng realistic Unsplash gym image -->
         <img
-          src="https://scontent.fmnl4-2.fna.fbcdn.net/v/t39.30808-6/472746939_578091061742026_5169691273355289058_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeHYXpkW_9f6Zp91gslN4RQ8Jv5IPyKZNZMm_kg_Ipk1k_-voFbYNQ7J9hvrSHS4xQ876kn_vfJ6fd6lXpwUfIzc&_nc_ohc=zIojsheUjLMQ7kNvwGf2DQ-&_nc_oc=Adp5wdl2ND1icN0a1R81HxekmaBbyF5_YkauD4XPSEAddzTMTmejMzD8rr6DqibgxQRFjGfwdN5nG4nVXtBDduo-&_nc_zt=23&_nc_ht=scontent.fmnl4-2.fna&_nc_gid=lKbxPa8FsU5R_qfissStaQ&_nc_ss=7b2a8&oh=00_Af1y81Q2TGRZ2r8MLYeOFEzrgS5CG5nyN_t2CjRnlh1xIg&oe=69F2912C"
+          src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1470&auto=format&fit=crop"
           class="w-full h-full object-cover grayscale opacity-90"
+          alt="Gym Space"
         />
 
         <div
@@ -832,7 +641,7 @@
               >
                 <span
                   class="font-sans font-bold text-lg md:text-xl uppercase text-white"
-                  >What classes can I join?</span
+                  >What Classes Can I Join?</span
                 >
                 <span
                   class="faq-plus w-8 h-8 flex-shrink-0 flex items-center justify-center bg-white text-black rounded-none text-2xl font-bold transition-transform duration-300"
@@ -846,10 +655,7 @@
                 <div
                   class="px-8 pb-6 md:pb-8 pt-4 border-t border-white/10 text-justify text-sm md:text-base text-gray-300 leading-relaxed"
                 >
-                  You can join boxing, MMA, GX class, TRX, zumba, and HIIT or
-                  circuit training sessions depending on your specific physical
-                  goals and personal daily schedule. All classes are thoroughly
-                  led by experienced professionals.
+                  Supremo Fitness provides diverse training disciplines including boxing, mixed martial arts, group fitness, suspension training, dance cardio, high-intensity interval training, and circuit-based conditioning. Class selection is determined by individual fitness objectives and schedule requirements. Professional instruction is delivered by certified coaching personnel throughout all sessions.
                 </div>
               </div>
             </div>
@@ -864,7 +670,7 @@
               >
                 <span
                   class="font-sans font-bold text-lg md:text-xl uppercase text-white"
-                  >Do you accept beginners?</span
+                  >Do You Accept Beginners?</span
                 >
                 <span
                   class="faq-plus w-8 h-8 flex-shrink-0 flex items-center justify-center bg-white text-black rounded-none text-2xl font-bold transition-transform duration-300"
@@ -878,10 +684,7 @@
                 <div
                   class="px-8 pb-6 md:pb-8 pt-4 border-t border-white/10 text-justify text-sm md:text-base text-gray-300 leading-relaxed"
                 >
-                  Yes, beginners are absolutely welcome. Our dedicated coaches
-                  can meticulously guide you through the fundamental basics so
-                  you can effectively start safely and successfully build up
-                  your confidence at your own manageable pace.
+                  Membership at Supremo Fitness accommodates all fitness levels and experience backgrounds. Professional coaching staff provides comprehensive instruction in foundational techniques, exercise mechanics, and progressive advancement protocols. Individualized guidance ensures safe training execution and structured progression aligned with member goals.
                 </div>
               </div>
             </div>
@@ -896,7 +699,7 @@
               >
                 <span
                   class="font-sans font-bold text-lg md:text-xl uppercase text-white"
-                  >Can I train combat & fitness together?</span
+                  >Can I Train Combat & Fitness Together?</span
                 >
                 <span
                   class="faq-plus w-8 h-8 flex-shrink-0 flex items-center justify-center bg-white text-black rounded-none text-2xl font-bold transition-transform duration-300"
@@ -910,10 +713,7 @@
                 <div
                   class="px-8 pb-6 md:pb-8 pt-4 border-t border-white/10 text-justify text-sm md:text-base text-gray-300 leading-relaxed"
                 >
-                  Yes. Supremo Fitness is fundamentally built for both robust
-                  strength and conditioning work as well as intense
-                  combat-focused training, so you can dynamically mix various
-                  classes seamlessly based on your hybrid program.
+                  Supremo Fitness facilities support integrated training protocols combining strength conditioning with combat sport disciplines. Members may strategically combine multiple training modalities in accordance with individual fitness objectives and programming requirements.
                 </div>
               </div>
             </div>
@@ -928,7 +728,7 @@
               >
                 <span
                   class="font-sans font-bold text-lg md:text-xl uppercase text-white"
-                  >Do you offer walk-in sessions?</span
+                  >Do You Offer Walk-In Sessions?</span
                 >
                 <span
                   class="faq-plus w-8 h-8 flex-shrink-0 flex items-center justify-center bg-white text-black rounded-none text-2xl font-bold transition-transform duration-300"
@@ -942,10 +742,7 @@
                 <div
                   class="px-8 pb-6 md:pb-8 pt-4 border-t border-white/10 text-justify text-sm md:text-base text-gray-300 leading-relaxed"
                 >
-                  Yes, casual walk-ins are continually welcome every single day.
-                  Diverse package rates are also structurally available for
-                  members who ultimately want to train more consistently through
-                  multiple engaging sessions per week.
+                  Drop-in access is available daily during all operating hours. Flexible membership packages accommodate various training frequencies and commitment preferences, including options for members seeking increased session participation.
                 </div>
               </div>
             </div>
@@ -960,7 +757,7 @@
               >
                 <span
                   class="font-sans font-bold text-lg md:text-xl uppercase text-white"
-                  >What should I bring?</span
+                  >What Should I Bring?</span
                 >
                 <span
                   class="faq-plus w-8 h-8 flex-shrink-0 flex items-center justify-center bg-white text-black rounded-none text-2xl font-bold transition-transform duration-300"
@@ -974,10 +771,7 @@
                 <div
                   class="px-8 pb-6 md:pb-8 pt-4 border-t border-white/10 text-justify text-sm md:text-base text-gray-300 leading-relaxed"
                 >
-                  Please reliably bring comfortable athletic workout clothes,
-                  proper hydration, a clean personal towel, and any specific
-                  personal training gear you already own. If you are entirely
-                  unsure, just start simple and directly ask the gym staff.
+                  Recommended items include appropriate athletic footwear, workout attire, personal hydration container, and a towel. Specialized training equipment owned by members is permitted. Facility staff provides orientation and guidance regarding necessary preparation and facility requirements.
                 </div>
               </div>
             </div>
@@ -1096,7 +890,7 @@
                   >
                 </li>
                 <li>
-                  <a href="#pricing" class="hover:text-gray-300 transition-colors"
+                  <a href="pricing.html" class="hover:text-gray-300 transition-colors"
                     >Pricing</a
                   >
                 </li>
@@ -1115,12 +909,12 @@
               </h4>
               <ul class="space-y-4 text-base">
                 <li>
-                  <a href="#" class="hover:text-gray-300 transition-colors"
+                  <a href="privacy.html" class="hover:text-gray-300 transition-colors"
                     >Privacy Policy</a
                   >
                 </li>
                 <li>
-                  <a href="#" class="hover:text-gray-300 transition-colors"
+                  <a href="terms.html" class="hover:text-gray-300 transition-colors"
                     >Terms of Service</a
                   >
                 </li>
@@ -1135,7 +929,8 @@
           <p class="text-gray-500 text-sm">Supremo Fitness &copy; 2026</p>
           <a
             href="#navbar"
-            class="text-gray-400 hover:text-white transition-colors flex items-center gap-2 text-sm font-bold uppercase tracking-widest"
+            onclick="document.documentElement.scrollTop = 0; document.body.scrollTop = 0; window.scrollTo({top: 0, behavior: 'smooth'}); return false;"
+            class="text-gray-400 hover:text-white transition-colors flex items-center gap-2 text-sm font-bold uppercase tracking-widest cursor-pointer"
           >
             Back to Top
             <svg
